@@ -1,6 +1,6 @@
 Name:			gnome-do-plugins
-Version:		0.8.1.1
-Release:		%mkrel 2
+Version:		0.8.2
+Release:		%mkrel 1
 Summary:		Creating and managing the plugins that put the 'Do' in 'GNOME Do'
 License:		GPLv3+
 Group:			Graphical desktop/GNOME
@@ -32,16 +32,18 @@ Creating and managing the plugins that put the 'Do' in 'GNOME Do'.
 %setup -q 
 
 %build
-%configure2_5x
-%make 
+%configure2_5x --libdir=%{_prefix}/lib
+%make
 
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
 
+%find_lang %name
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %name.lang
 %defattr(-,root,root,-)
-%{_datadir}/gnome-do/plugins/*
+%{_prefix}/lib/gnome-do/plugins/*
