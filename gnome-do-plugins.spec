@@ -1,13 +1,12 @@
 Name:			gnome-do-plugins
 Version:		0.8.2
-Release:		%mkrel 1
+Release:		%mkrel 2
 Summary:		Creating and managing the plugins that put the 'Do' in 'GNOME Do'
 License:		GPLv3+
 Group:			Graphical desktop/GNOME
 URL:			http://do.davebsd.com/
 Source0:		http://launchpad.net/do-plugins/0.8/%version/+download/%name-%version.tar.gz
 BuildRoot:		%{_tmppath}/%{name}-%{version}-%{release}-root
-BuildArch:		noarch
 BuildRequires:		intltool >= 0.35.0
 BuildRequires:		gnome-do >= 0.8
 BuildRequires:		banshee >= 1.4.2
@@ -32,7 +31,7 @@ Creating and managing the plugins that put the 'Do' in 'GNOME Do'.
 %setup -q 
 
 %build
-%configure2_5x --libdir=%{_prefix}/lib
+%configure2_5x
 %make
 
 %install
@@ -46,4 +45,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %name.lang
 %defattr(-,root,root,-)
-%{_prefix}/lib/gnome-do/plugins/*
+%{_libdir}/gnome-do/plugins/*
