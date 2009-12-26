@@ -23,6 +23,7 @@ BuildRequires:		gtk-sharp2
 BuildRequires:		ndesk-dbus
 BuildRequires:		ndesk-dbus-glib
 BuildRequires:		notify-sharp
+BuildRequires:		mono-gdata
 
 %description
 Creating and managing the plugins that put the 'Do' in 'GNOME Do'.
@@ -31,7 +32,7 @@ Creating and managing the plugins that put the 'Do' in 'GNOME Do'.
 %setup -q 
 
 %build
-%configure2_5x
+%configure2_5x --disable-evolution
 %make
 
 %install
