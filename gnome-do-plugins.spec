@@ -1,6 +1,6 @@
 Name:			gnome-do-plugins
-Version:		0.8.2
-Release:		%mkrel 2
+Version:		0.8.2.1
+Release:		%mkrel 1
 Summary:		Creating and managing the plugins that put the 'Do' in 'GNOME Do'
 License:		GPLv3+
 Group:			Graphical desktop/GNOME
