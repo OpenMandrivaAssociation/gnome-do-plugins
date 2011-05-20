@@ -1,6 +1,6 @@
 Name:			gnome-do-plugins
-Version:		0.8.2.1
-Release:		%mkrel 2
+Version:		0.8.3.1
+Release:		%mkrel 1
 Summary:		Creating and managing the plugins that put the 'Do' in 'GNOME Do'
 License:		GPLv3+
 Group:			Graphical desktop/GNOME
@@ -9,7 +9,7 @@ Source0:		http://launchpad.net/do-plugins/0.8/%version/+download/%name-%version.
 Patch0:			gnome-do-plugins-0.8.2.1-mono2.8.patch
 BuildRoot:		%{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires:		intltool >= 0.35.0
-BuildRequires:		gnome-do >= 0.8
+BuildRequires:		gnome-do >= 0.8.4
 BuildRequires:		banshee-devel >= 1.4.2
 Buildrequires:		mono-devel
 BuildRequires:		mono-flickrnet
@@ -31,12 +31,9 @@ Creating and managing the plugins that put the 'Do' in 'GNOME Do'.
 
 %prep
 %setup -q
-%patch0 -p0 
 
 %build
-autoreconf -fi
-%configure2_5x --disable-evolution \
-	--disable-gcal
+%configure2_5x
 %make
 
 %install
