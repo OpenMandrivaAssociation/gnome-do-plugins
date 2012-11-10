@@ -1,0 +1,10 @@
+--- GoogleContacts/src/GMailClient.cs.mono	2011-05-20 18:15:32.000000000 +0200
++++ GoogleContacts/src/GMailClient.cs	2011-05-20 18:15:41.000000000 +0200
+@@ -77,7 +77,6 @@
+ 
+ 					AddDetails (buddy, entry.Emails);
+ 					AddDetails (buddy, entry.Phonenumbers);
+-					AddDetails (buddy, entry.PostalAddresses);
+ 					
+ 					contacts.Add (buddy);
+ 				}
