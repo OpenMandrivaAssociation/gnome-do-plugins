@@ -4,7 +4,7 @@ Release:		1
 Summary:		Creating and managing the plugins that put the 'Do' in 'GNOME Do'
 License:		GPLv3+
 Group:			Graphical desktop/GNOME
-URL:			http://do.davebsd.com/
+URL:			https://do.davebsd.com/
 Source0:		http://launchpad.net/do-plugins/0.8/%version/+download/%name-%version.tar.gz
 Patch0:			gnome-do-plugins-0.8.3.1-mono2.8.patch
 BuildRequires:		intltool >= 0.35.0
