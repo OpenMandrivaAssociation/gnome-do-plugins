@@ -7,6 +7,11 @@ Group:			Graphical desktop/GNOME
 URL:			https://do.davebsd.com/
 Source0:		http://launchpad.net/do-plugins/0.8/%version/+download/%name-%version.tar.gz
 Patch0:			gnome-do-plugins-0.8.3.1-mono2.8.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:		intltool >= 0.35.0
 BuildRequires:		gnome-do >= 0.8.4
 BuildRequires:		banshee-devel >= 1.4.2
